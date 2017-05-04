@@ -1,1 +1,1 @@
-# cloudinary-pwa-react
+# cloudinary-pwa-react-advanced

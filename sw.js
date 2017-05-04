@@ -1,22 +1,15 @@
 (function () {
   "use strict";
 
-  var cacheNameStatic = 'cloudinary-pwa-react-v1';
+  var cacheNameStatic = 'cloudinary-pwa-react-v2';
 
   var currentCacheNames = [ cacheNameStatic ];
 
   var cachedUrls = [
     // 3rd party CDN
-    'https://unpkg.com/babel-core@5.8.38/browser.min.js',
-    'https://unpkg.com/lodash@4.17.4/lodash.js',
-    'https://unpkg.com/react@15.3.1/dist/react.min.js',
-    'https://unpkg.com/react-dom@15.3.1/dist/react-dom.min.js',
-    'https://unpkg.com/react-router-dom/umd/react-router-dom.min.js',
-    'https://unpkg.com/cloudinary-core@2.3.0/cloudinary-core.js',
-    'https://unpkg.com/cloudinary-react@1.0.3/dist/cloudinary-react.js',
-    'https://unpkg.com/axios/dist/axios.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css',
     // Local assets
+    '/dist/bundle.js',
     '/style.css',
     // Fake API
     '/images.json'
