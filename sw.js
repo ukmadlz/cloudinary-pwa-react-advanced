@@ -52,21 +52,19 @@
     console.log('Fetch item');
     event.respondWith(
       caches.open(cacheNameStatic).then(function(cache) {
-        return cache.match(event.request).then(function(response) {
+        return cache.match(event.request.url).then(function(response) {
           if (event.request.url.indexOf('http://res.cloudinary.com/elsmore-me/image/upload/dpr_auto/c_thumb,g_face,h_500,w_500/c_fill,h_150,w_300/g_south_east,l_cloudinary_logo,o_70,w_100,x_10,y_10/') > -1 ) {
             let urlArray = event.request.url.split('/');
             let publicId = urlArray[urlArray.length-1];
             console.log('Grab the bigger version of %s', publicId);
             let newUrl = 'http://res.cloudinary.com/elsmore-me/image/upload/dpr_auto/g_south_east,l_cloudinary_logo,o_70,w_500,x_10,y_10/fl_progressive/' + publicId;
-            let newEventRequest = Object.assign({}, event.request);
-            newEventRequest.url = newUrl;
-            fetch(newEventRequest).then(function(newNetworkResponse) {
+            fetch(newUrl).then(function(newNetworkResponse) {
               console.log('Caching larger version of %s', publicId);
-              cache.put(newEventRequest, newNetworkResponse);
+              cache.put(newUrl, newNetworkResponse);
             })
           }
           var fetchPromise = fetch(event.request).then(function(networkResponse) {
-            cache.put(event.request, networkResponse.clone());
+            cache.put(event.request.url, networkResponse.clone());
             return networkResponse;
           })
           if(response) {
