@@ -133,8 +133,8 @@ let ViewPhoto = React.createClass({
             <h1 className="center-align">{photoDetails.name}</h1>
           </div>
           <div className="row">
-            <div className="col l7 s12" >
-              <CleverCloudinaryReact cloudName="elsmore-me" publicId={photoDetails.publicId} width="100%">
+            <div className="col l7 s12 full-image" >
+              <CleverCloudinaryReact cloudName="elsmore-me" publicId={photoDetails.publicId} >
                 <Transformation overlay="cloudinary_logo" width="500" x="10" y="10" opacity="70" gravity="south_east"/>
               </CleverCloudinaryReact>
             </div>
