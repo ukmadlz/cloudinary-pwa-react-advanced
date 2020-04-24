@@ -17,19 +17,19 @@
   },
   "homepage": "https://github.com/ukmadlz/cloudinary-pwa-react-advanced#readme",
   "devDependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.19.2",
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^8.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "clever-cloudinary-react": "^0.1.4",
     "cloudinary-core": "^2.3.0",
     "cloudinary-react": "^1.0.3",
-    "preact": "^8.1.0",
+    "preact": "^10.4.1",
     "preact-compat": "^3.16.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1",
-    "webpack": "^2.5.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "webpack": "^4.43.0"
   }
 }
